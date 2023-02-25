@@ -1,0 +1,21 @@
+{% extends 'base.html' %} <!--Extending base html file-->
+{% block content %}
+<!--Creating a modal-->
+<div class="modal">
+    <div class="modal-content">
+        <h3 style="margin-top: 0px">File Name: {{ file_name }}</h3>
+        <!--Creating a form to get username and password-->
+        <form method="POST" action = "{% url 'FileDownload' file_id %}">
+            {% csrf_token %}
+            <label for="token">Username:</label>
+            <br>
+            <input placeholder="Enter username here..." type="text" id="username" name="username">
+            <label for="token">Password:</label>
+            <br>
+            <input placeholder="Enter password here..." type="password" id="password" name="password">
+            <!--Download button-->
+            <button type="submit" >Download</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

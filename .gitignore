@@ -4,7 +4,8 @@
 __pycache__
 db.sqlite3
 media
-migrations/*
+FilesApp/migrations/*
+Accounts/migrations/*
 .DS_Store 
 dump.rdb
 .env
